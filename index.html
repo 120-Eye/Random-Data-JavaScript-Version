@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random User Data Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Random User Data Generator</h1>
+
+        <!-- Country Selection -->
+        <label for="country">Select Country:</label>
+        <select id="country" onchange="toggleSSNOption()">
+            <option value="India" selected>India</option>
+            <option value="USA">USA</option>
+            <option value="UK">UK</option>
+            <option value="Canada">Canada</option>
+        </select>
+
+        <!-- Checkbox Options -->
+        <div class="checkbox-group">
+            <label class="checkbox-btn">
+                <input type="checkbox" value="name">
+                <span class="btn-text">Name</span>
+            </label>
+            <label class="checkbox-btn">
+                <input type="checkbox" value="email">
+                <span class="btn-text">Email</span>
+            </label>
+            <label class="checkbox-btn">
+                <input type="checkbox" value="phone">
+                <span class="btn-text">Phone</span>
+            </label>
+            <label class="checkbox-btn" id="ssn-checkbox" style="display: none;">
+                <input type="checkbox" value="ssn">
+                <span class="btn-text">SSN</span>
+            </label>
+        </div>
+
+        <!-- Number of Users -->
+        <label for="num-users">Number of Users:</label>
+        <input type="number" id="num-users" min="1" value="5">
+
+        <!-- Generate Button -->
+        <button id="generateBtn">Generate Data</button>
+        <button id="downloadBtn" style="display: none;">Download CSV</button>
+
+        <!-- Output Container -->
+        <div id="output-container"></div>
+    </div>
+
+    <footer>
+        <p>All rights reserved © Team Defenders™ | <a href="https://github.com/120-Eye" target="_blank">GitHub</a></p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
